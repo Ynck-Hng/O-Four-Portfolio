@@ -36,11 +36,11 @@ e. SELECT * FROM "ingredient";
 
 - Entrez `nodemon index.js` / `node-dev index.js` dans le terminal.
 
-- Et voilà le serveur API est lancé sur `http://localhost:PORT` :rocket:
+- Et voilà le serveur API est lancé sur `http://localhost:PORT`. :rocket:
   - :warning: Remarque : Cette API n'est qu'en read-only (pour l'instant) et ne comporte que des routes `GET`.
   
 - Optionnel : Vous pouvez également consulter la documentation de l'API sur la route : `http://localhost:PORT/api-docs`. :thumbsup:
 
 - :warning: Remarque 2 : Les calls axios côté front sont faits sur le `PORT=3000`, si le serveur API fonctionne sur un Port différent, veillez à modifier également le Port dans le fichier `frontend/app/src/index.jsx`
 
-Si vous n'avez pas encore rencontré le service à l'accueil, c'est par <a href="./../frontend/README.md"> -> ici <- </a>
+Si vous n'avez pas encore rencontré le service à l'accueil, c'est par <a href="./../frontend/README.md"> -> ici <- </a>.
