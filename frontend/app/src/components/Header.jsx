@@ -6,7 +6,7 @@ export default function Header() {
             <header>
                 <div className="header__content--wrapper">
 
-                    <Link to="/">
+                    <Link to="/" id="ofour__icon--wrapper">
                         <img id="ofour-icon" src="/app/src/assets/images/logo.png" alt="O'Four Logo" />
                     </Link>
                     <h1> O'Four - Portfolio </h1>
