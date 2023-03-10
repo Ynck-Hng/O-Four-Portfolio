@@ -2,7 +2,7 @@
 
 ## Cékwa O'Four ? :confused:
 
-O'Four est un générateur de recette qui a pour objectif de proposer une solution à la question légendaire qui se pose depuis la nuit des temps : que manger ?
+O'Four est un générateur de recette qui a pour objectif de proposer une solution à la question légendaire qui se pose à l'heure du repas : que manger ?
 
 C'est également un projet réalisé dans le but de mettre en pratique la logique du framework React avec React Router et de la combiner avec une petite API développée avec NodeJS et Express.
 
