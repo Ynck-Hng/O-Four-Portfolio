@@ -46,9 +46,6 @@ export default function RecipePage({ PORT, addViewedRecipe, currentRecipeHistory
         getRecipe();
     }, []);
 
-    useEffect(() => {
-        console.log("from recipe page", currentRecipeHistory);
-    }, [currentRecipeHistory])
     document.title = `O'Four - ${recipe?.name}`;
 
     return (
