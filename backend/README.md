@@ -1,6 +1,6 @@
 # Bienvenue côté fourneau héhé, je vais vous montrer comment ça marche ! 🧑‍🍳
 
-- Tapez dans le terminal la commande `cd backend/`
+- Tapez dans le terminal la commande `cd backend/`.
 
 - Puis `yarn` pour installer les dépendances.
 
@@ -34,10 +34,12 @@ e. SELECT * FROM "ingredient";
 
 `npx prisma generate --schema=./app/schema/schema.prisma`
 
-- Entrez `nodemon index.js` / `node-dev index.js` dans le terminal
+- Entrez `nodemon index.js` / `node-dev index.js` dans le terminal.
 
 - Et voilà le serveur API est lancé sur `http://localhost:PORT` :rocket:
   - :warning: Remarque : Cette API n'est qu'en read-only (pour l'instant) et ne comporte que des routes `GET`.
+  
+- Optionnel : Vous pouvez également consulter la documentation de l'API sur la route : `http://localhost:PORT/api-docs`. :thumbsup:
 
 - :warning: Remarque 2 : Les calls axios côté front sont faits sur le `PORT=3000`, si le serveur API fonctionne sur un Port différent, veillez à modifier également le Port dans le fichier `frontend/app/src/index.jsx`
 
