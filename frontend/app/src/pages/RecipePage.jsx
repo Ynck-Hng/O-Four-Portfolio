@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 export default function RecipePage({ PORT, addViewedRecipe, currentRecipeHistory }) {
     const recipeId = useParams();
     const [recipe, setRecipe] = useState();
+
     const navigate = useNavigate();
 
     const getRecipe = async () => {
@@ -20,19 +21,18 @@ export default function RecipePage({ PORT, addViewedRecipe, currentRecipeHistory
             let isFound = foundRecipe ? true : false;
             switch (true) {
                 case (!isFound && currentRecipeHistory?.length < 5):
-                    const newRecipeHistory = currentRecipeHistory?.reverse();
-                    newRecipeHistory.push(value.data);
+                    let newRecipeHistory = currentRecipeHistory?.reverse();
+                    newRecipeHistory = [...newRecipeHistory, value.data];
                     addViewedRecipe(newRecipeHistory.reverse());
                     break;
                 case (!isFound && currentRecipeHistory?.length >= 5):
-                    const spliceFirstRecipeHistory = currentRecipeHistory?.reverse();
-                    spliceFirstRecipeHistory.shift();
-                    spliceFirstRecipeHistory.push(value.data);
+                    let spliceFirstRecipeHistory = currentRecipeHistory?.reverse().slice(1);
+                    spliceFirstRecipeHistory = [...spliceFirstRecipeHistory, value.data];
                     addViewedRecipe(spliceFirstRecipeHistory.reverse());
                     break;
                 case (isFound):
-                    const filteredRecipeHistory = currentRecipeHistory?.reverse().filter((recipe) => recipe.id !== value.data.id);
-                    filteredRecipeHistory.push(value.data);
+                    let filteredRecipeHistory = currentRecipeHistory?.reverse().filter((recipe) => recipe.id !== value.data.id);
+                    filteredRecipeHistory = [...filteredRecipeHistory, value.data];
                     addViewedRecipe(filteredRecipeHistory.reverse());
                     break;
                 default:
@@ -45,6 +45,10 @@ export default function RecipePage({ PORT, addViewedRecipe, currentRecipeHistory
     useEffect(() => {
         getRecipe();
     }, []);
+
+    useEffect(() => {
+        console.log("from recipe page", currentRecipeHistory);
+    }, [currentRecipeHistory])
     document.title = `O'Four - ${recipe?.name}`;
 
     return (
