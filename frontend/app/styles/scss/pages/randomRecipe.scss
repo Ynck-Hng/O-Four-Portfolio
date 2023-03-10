@@ -1,0 +1,143 @@
+@use "./../globals/vars" as vars;
+@use "./../globals/mixins" as mixins;
+
+.random__recipe--page-container{
+    margin-top: 20px;
+    width: 1200px
+}
+
+.random__recipe--page-top{
+    background-color: vars.$secondary-background-color;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 15px;
+    border: solid 1px vars.$border-color;
+    box-shadow: 0 5px 10px rgba(36, 33, 31,0.05), 0 15px 40px rgba(36, 33, 31,0.2);
+    border-bottom: none;
+    animation: bounceIn ease-in 1.2s;
+}
+
+.random__recipe--page-bottom{
+    @extend .random__recipe--page-top;
+}
+
+.recipe__container{
+    display: flex;
+    border-top: solid 1px vars.$border-color; 
+    border-bottom: solid 1px vars.$border-color; 
+    background-color: vars.$background-color;
+    transition: 0.3s all;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: 0.3s all;
+}
+
+
+.recipe__container:hover{
+    background-color: vars.$secondary-background-color;
+}
+
+.random__recipe--title-container, .viewed__recipe--title-container{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: white;
+}
+
+.recipe__title{
+    text-align: center;
+    font-size: vars.$font-title-size * 1.2;
+    color: vars.$font-title-color;
+    padding: 25px 0;
+    font-weight: bold;
+    @include mixins.flex-center;
+}
+
+.viewed__recipe--title{
+    font-size: vars.$font-title-size;
+}
+
+.recipe__img-container{
+    width: 20%;
+    @include mixins.flex-center;
+}
+
+.recipe__img{
+    width: 250px;
+    height: 100%;
+
+}
+
+.random__recipe--img{
+    width: 350px;
+}
+
+.recipe__description--container{
+    @include mixins.flex-center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 1em;
+}
+
+.recipe__description{
+    color: vars.$font-color;
+    line-height: 1.2em;
+    margin-bottom: 16px;
+    font-size: vars.$font-text-size * 1.1;
+
+}
+
+.viewed__recipe--description{
+    font-size: vars.$font-text-size * 0.8;
+}
+
+.recipe__grade{
+    font-weight: bold;
+    font-size: vars.$font-text-size * 1.2;
+}
+
+.viewed__recipe--grade{
+    font-size: vars.$font-text-size;
+}
+
+.recipe__name{
+    font-size: vars.$font-secondary-title-size;
+    padding-bottom: 20px;
+    color: vars.$font-color;
+    font-weight: bold;
+}
+
+.random__recipe--name{
+    padding-bottom: 40px;
+    font-size: vars.$font-secondary-title-size * 1.2;
+}
+
+.viewed__recipe--name{
+    margin-top: 15px;
+    font-size: vars.$font-secondary-title-size;
+}
+
+.no__viewed--recipe, .no__generated--recipe{
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+.random__recipe--separator{
+    width: 100%;
+    border: solid 2px vars.$font-title-color;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% { transform: scale(.9); }
+    100% { transform: scale(1); }
+}

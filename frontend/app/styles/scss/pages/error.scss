@@ -1,0 +1,29 @@
+@use "./../globals/vars" as vars;
+@use "./../globals/mixins" as mixins;
+
+.error__container{
+    @include mixins.flex-center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.error__img--container{
+    max-width: 1000px;
+
+}
+
+.error__img{
+    width: 100%;
+}
+
+.error__message--container{
+    width: 80%;
+    margin: 50px 0;
+}
+
+.error__message{
+    color: vars.$font-color;
+    font-size: vars.$font-text-size;
+    font-weight: bold;
+    line-height: 1.5em;
+}

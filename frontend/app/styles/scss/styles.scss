@@ -1,0 +1,150 @@
+// Globals
+@use "./globals/_vars.scss" as vars;
+@use "./globals//mixins" as mixins;
+
+@forward './globals/_reset.scss';
+
+// Components
+@forward "./components/header.scss";
+@forward "./components/footer.scss";
+
+// Pages
+
+@forward "./pages/homePage.scss";
+@forward "./pages/randomRecipe.scss";
+@forward "./pages/recipePage.scss";
+@forward "./pages/contact.scss";
+@forward "./pages/about.scss";
+@forward "./pages/error.scss";
+// All
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: vars.$background-color;
+    background-image:url("/var/www/html/projet/S08-Exo-bonus-TP-Ynck-Hng/frontend/app/src/assets/images/imageedit_3_5356395248.png");
+    background-position: center;
+    background-attachment: fixed;
+    font-family:'Inter', sans-serif;
+}
+
+
+
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app{
+    min-height: 100vh;
+}
+
+main{
+    width: 100%;
+    @include mixins.flex-center;
+    flex-direction: column;
+}
+
+a{
+    color: vars.$font-color;
+    text-decoration: none;
+}
+
+.icon{
+    max-width: 25px;
+    margin-right: 0.5em;
+}
+
+nav{
+    @include mixins.flex-center;
+}
+
+// medias
+
+@media screen and (max-width: 1300px) {
+
+    html{
+        font-size: 14px;
+    }
+
+    .header__content--wrapper{
+        max-width: 100%;
+    }
+
+    .header__link--container{
+        max-width: 100%;
+    }
+
+    .random__recipe--page-container{
+        max-width: 90%;
+    }
+
+    .recipe__page--container{
+        max-width: 90%;
+    }
+
+    .contact__container{
+        max-width: 90%;
+    }
+
+    .about__container{
+        max-width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    html{
+        font-size: 10px;
+    }
+
+    .recipe__img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    html{
+        font-size: 8px;
+    }
+
+    #ofour-icon{
+        width: 40px;
+    }
+
+    .header__link--container{
+        max-width: 100%;
+    }
+
+    .recipe__img{
+        width: 150px;
+    }
+
+    .home__title{
+        margin-bottom: 25px;
+    }
+
+    .home__generate--button{
+        margin-top: 25px;
+        padding: 10px 1em;
+    }
+
+    .contact__container{
+        margin: 35px 0;
+    }
+
+    textarea{
+        height: 150px;
+    }
+
+    .about__container{
+        margin-top: 150px;
+    }
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+/*# sourceMappingURL=styles.scss.map */

@@ -1,0 +1,56 @@
+@use "./../globals/vars" as vars;
+@use "./../globals/mixins" as mixins;
+
+header{
+    width: 100%;
+    background-image: linear-gradient(whitesmoke, vars.$secondary-background-color);
+    border-bottom: solid 1px vars.$border-color;
+    box-shadow: 0 10px 20px rgba(124, 120, 113,0.19), 0 6px 6px rgba(124, 120, 113,0.23);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+}
+
+.header__content--wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#ofour-icon{
+    width: 70px;
+    margin-left: 10px;
+}
+
+h1{
+    font-size: vars.$font-title-size;
+    color: vars.$font-color;
+
+}
+
+.header__link--container{
+    @include mixins.flex-center;
+    height: 100%;
+    max-width: 70px;
+}
+
+.header__link {
+    height: 100%;
+    @include mixins.flex-center;
+    padding: 0 1em;
+    border-left: solid 1px vars.$border-color;
+    transition: 0.3s all;
+}
+
+.header__link:hover{
+    background-color: vars.$hover-background-color;
+}
+
+.about__link{
+    border-right: solid 1px vars.$border-color;
+}

@@ -1,0 +1,138 @@
+@use "./../globals/vars" as vars;
+@use "./../globals//mixins" as mixins;
+
+.recipe__page--container{
+    max-width: 1200px;
+    animation: fadeInDown ease 1s;
+}
+
+.recipe__page--top-container{
+    background-color: vars.$secondary-background-color;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(36, 33, 31,0.05), 0 15px 40px rgba(36, 33, 31,0.2);
+    border: solid 1px vars.$border-color;
+    margin-top: 20px;
+}
+
+.recipe__page--title-container{
+    width: 100%;
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 15px;
+    border-bottom: solid 2px vars.$border-color;
+}
+
+.recipe__page--title{
+    font-size: vars.$font-title-size;
+    color: vars.$font-title-color;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: bold;
+}
+
+.recipe__page--top{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.recipe__page--img-container{
+    background-color: vars.$secondary-background-color;
+    max-width: 56%;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(36, 33, 31,0.05), 0 15px 40px rgba(36, 33, 31,0.2);
+
+}
+
+.recipe__page--img{
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    border: solid 1px vars.$border-color;
+
+}
+
+.recipe__ingredients--container{
+    width: 40%;
+    background-color: vars.$secondary-background-color;
+    border-radius: 15px;
+    border: solid 1px vars.$border-color;
+    box-shadow: 0 5px 10px rgba(36, 33, 31,0.05), 0 15px 40px rgba(36, 33, 31,0.2);
+
+}
+
+.recipe__ingredients--title{
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: vars.$font-secondary-title-size;
+    color: vars.$font-color;
+    border-bottom: solid 2px vars.$border-color;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-weight: bold;
+    @include mixins.flex-center;
+}
+
+.recipe__ingredients--list{
+    line-height: 1.3em;
+    color: vars.$font-color;
+    padding-bottom: 10px;
+}
+
+.ingredient{
+    margin-right: 1em;
+    margin-left: 3em;
+    list-style: inside;
+}
+
+.recipe__page--bottom{
+    background-color: vars.$secondary-background-color;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: solid 1px vars.$border-color;
+    box-shadow: 0 5px 10px rgba(36, 33, 31,0.05), 0 15px 40px rgba(36, 33, 31,0.2);
+    padding-bottom: 20px;
+}
+
+.recipe__steps--title{
+    @extend .recipe__ingredients--title;
+}
+
+.recipe__steps--list{
+    @include mixins.flex-center;
+    flex-direction: column;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.step{
+    list-style-type: decimal;
+    list-style-position: inside;
+    background-color: white;
+    padding: 20px 1em;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(124, 120, 113,0.19), 0 6px 6px rgba(124, 120, 113,0.23);
+    margin-bottom: 20px;
+    border: solid 1px vars.$border-color;
+    width: 70%;
+    text-align: center;
+    color: vars.$font-color;
+    line-height: 1.5rem;
+}
+
+// keyframes
+
+@keyframes fadeInDown {
+    0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

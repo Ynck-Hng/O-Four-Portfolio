@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@prisma/client": "^4.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-swagger-generator": "^1.1.17",
+    "prisma": "^4.10.1"
+  }
+}

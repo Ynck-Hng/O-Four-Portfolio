@@ -1,0 +1,24 @@
+@use "./../globals/mixins" as mixins;
+@use "./../globals/vars" as vars;
+
+footer{
+    position: relative;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    @include mixins.flex-center;
+    justify-content: space-evenly;
+    background-color: vars.$secondary-background-color;
+    padding: 15px 0;
+    border-top: solid 1px vars.$border-color;
+
+}
+
+.footer__link{
+    @include mixins.flex-center;
+}
+
+.footer__link:hover{
+    color: gray;
+    transition: 0.3s all;
+}
