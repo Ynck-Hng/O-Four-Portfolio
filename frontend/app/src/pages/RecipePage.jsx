@@ -21,19 +21,18 @@ export default function RecipePage({ PORT, addViewedRecipe, currentRecipeHistory
             let isFound = foundRecipe ? true : false;
             switch (true) {
                 case (!isFound && currentRecipeHistory?.length < 5):
-                    let newRecipeHistory = currentRecipeHistory?.reverse();
-                    newRecipeHistory = [...newRecipeHistory, value.data];
-                    addViewedRecipe(newRecipeHistory.reverse());
+                    let newRecipeHistory = [value.data, ...currentRecipeHistory];
+                    addViewedRecipe(newRecipeHistory);
                     break;
                 case (!isFound && currentRecipeHistory?.length >= 5):
-                    let spliceFirstRecipeHistory = currentRecipeHistory?.reverse().slice(1);
-                    spliceFirstRecipeHistory = [...spliceFirstRecipeHistory, value.data];
-                    addViewedRecipe(spliceFirstRecipeHistory.reverse());
+                    let sliceFirstRecipeHistory = currentRecipeHistory.slice(0, 4);
+                    sliceFirstRecipeHistory = [value.data, ...sliceFirstRecipeHistory];
+                    addViewedRecipe(sliceFirstRecipeHistory);
                     break;
                 case (isFound):
-                    let filteredRecipeHistory = currentRecipeHistory?.reverse().filter((recipe) => recipe.id !== value.data.id);
-                    filteredRecipeHistory = [...filteredRecipeHistory, value.data];
-                    addViewedRecipe(filteredRecipeHistory.reverse());
+                    let filteredRecipeHistory = currentRecipeHistory?.filter((recipe) => recipe.id !== value.data.id);
+                    filteredRecipeHistory = [value.data, ...filteredRecipeHistory];
+                    addViewedRecipe(filteredRecipeHistory);
                     break;
                 default:
                     break;
