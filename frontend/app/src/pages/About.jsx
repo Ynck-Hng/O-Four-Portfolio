@@ -19,10 +19,9 @@ export default function About() {
 
                     <div className="about__description--container">
                         <span className="about__description">
-                            O'Four est un générateur de recette qui a pour objectif de résoudre la question légendaire qui se pose à l'heure du repas : "que manger ?".
+                            <p>O'Four est un générateur de recette qui a pour objectif de résoudre la question légendaire qui se pose à l'heure du repas : "que manger ?".</p>
                             &nbsp;
-                            &nbsp;
-                            C'est également un projet réalisé dans le but de mettre en pratique la logique du framework React avec React Router et de la combiner avec une petite API développée avec NodeJS et Express.
+                            <p>C'est également un projet réalisé dans le but de mettre en pratique la logique du framework React avec React Router et de la combiner avec une petite API développée avec NodeJS et Express.</p>
                         </span>
                     </div>
 
