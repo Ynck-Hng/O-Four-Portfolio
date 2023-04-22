@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 export default function Header() {
-    const isClicked = useState(false);
-
+    const [isActive, setIsActive] = useState(false);
     return (
         <>
             <header>
@@ -26,14 +25,14 @@ export default function Header() {
                         </Link>
                     </div>
 
-                    <div className="header__burger--menu">
+                    <div className={`header__burger--menu ${!isActive ? "hidden" : ""}`} onClick={() => setIsActive(!isActive)}>
                         <span className='burger__top burger__line'></span>
                         <span className='burger__mid burger__line'></span>
                         <span className='burger__bot burger__line'></span>
                     </div>
                 </div>
-            </header>
-            <div className="header__burger--content">
+            </header >
+            <div className={`header__burger--content ${isActive ? "" : "hidden"}`} onClick={() => setIsActive(!isActive)}>
                 <button className='header__burger--close'>
                     <span className='burger__cross--close burger__cross'> + </span>
                 </button>

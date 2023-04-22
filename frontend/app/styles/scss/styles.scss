@@ -62,6 +62,10 @@ nav{
     @include mixins.flex-center;
 }
 
+.hidden {
+    display: none;
+}
+
 // medias
 
 @media screen and (max-width: 1300px) {
@@ -155,7 +159,16 @@ nav{
 
     .header__link{
         border: none;
+        border-top: solid 1px rgb(185, 184, 184);
+        border-bottom: solid 1px rgb(185, 184, 184);
+        width: 100%;
+        padding: 10px 0;
     }
+
+    .header__link:hover {
+        background-color: whitesmoke;
+    }
+    
     .about__link {
         border: none;
     }
