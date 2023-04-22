@@ -113,6 +113,55 @@ h1 {
   border-right: solid 1px #D3D3D3;
 }
 
+.header__burger--menu {
+  width: 25px;
+  height: 100%;
+  flex-basis: 25%;
+  display: none;
+}
+
+.burger__line {
+  border: solid 1px black;
+  width: 20px;
+  display: flex;
+}
+
+.burger__mid {
+  margin: 5px 0;
+}
+
+.header__burger--content {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+}
+
+.header__burger--close {
+  display: flex;
+  align-self: flex-end;
+  background: none;
+  border: none;
+}
+
+.burger__cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 1px black;
+  width: 25px;
+  height: 25px;
+  transform: rotate(45deg);
+  margin-top: 10px;
+  margin-right: 5px;
+  font-size: 22px;
+}
+
 footer {
   position: relative;
   margin-top: auto;
@@ -322,6 +371,9 @@ footer {
 .no__viewed--recipe, .no__generated--recipe {
   margin: 0 auto;
   padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .random__recipe--separator {
@@ -720,7 +772,7 @@ textarea:focus {
 
 body {
   background-color: rgba(210, 180, 140, 0.3);
-  background-image: url("/var/www/html/projet/S08-Exo-bonus-TP-Ynck-Hng/frontend/app/src/assets/images/imageedit_3_5356395248.png");
+  background-image: url("./../../src/assets/images/imageedit_3_5356395248.png");
   background-position: center;
   background-attachment: fixed;
   font-family: "Inter", sans-serif;
@@ -785,15 +837,15 @@ nav {
 }
 @media screen and (max-width: 550px) {
   html {
-    font-size: 10px;
+    font-size: 13px;
   }
   .recipe__img {
     width: 200px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 520px) {
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
   #ofour-icon {
     width: 40px;
@@ -820,8 +872,23 @@ nav {
   .about__container {
     margin-top: 150px;
   }
+  .header__link--container {
+    display: none;
+  }
+  .header__burger--menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header__link {
+    border: none;
+  }
+  .about__link {
+    border: none;
+  }
 }
-/*# sourceMappingURL=styles.css.map */
-/*# sourceMappingURL=styles.scss.map */
+
+
 
 /*# sourceMappingURL=styles.css.map */

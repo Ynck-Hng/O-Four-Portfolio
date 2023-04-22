@@ -24,7 +24,7 @@
 
 body {
     background-color: vars.$background-color;
-    background-image:url("/var/www/html/projet/S08-Exo-bonus-TP-Ynck-Hng/frontend/app/src/assets/images/imageedit_3_5356395248.png");
+    background-image:url("./../../src/assets/images/imageedit_3_5356395248.png");
     background-position: center;
     background-attachment: fixed;
     font-family:'Inter', sans-serif;
@@ -98,7 +98,7 @@ nav{
 
 @media screen and (max-width: 550px){
     html{
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .recipe__img{
@@ -106,9 +106,9 @@ nav{
     }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 520px){
     html{
-        font-size: 8px;
+        font-size: 10px;
     }
 
     #ofour-icon{
@@ -142,6 +142,22 @@ nav{
 
     .about__container{
         margin-top: 150px;
+    }
+
+    .header__link--container{
+        display: none;
+    }
+
+    .header__burger--menu{
+        @include mixins.flex-center;
+        flex-direction: column;
+    }
+
+    .header__link{
+        border: none;
+    }
+    .about__link {
+        border: none;
     }
 }
 

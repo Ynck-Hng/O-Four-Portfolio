@@ -60,3 +60,48 @@ h1{
 .about__link{
     border-right: solid 1px vars.$border-color;
 }
+
+.header__burger--menu{
+    width: 25px;
+    height: 100%;
+    flex-basis: 25%;
+    display: none;
+}
+
+.burger__line{
+    border: solid 1px black;
+    width: 20px;
+    display: flex;
+}
+
+.burger__mid{
+    margin: 5px 0;
+}
+
+.header__burger--content{
+    width: 100%;
+    background-color: white;
+    @include mixins.flex-center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+}
+
+.header__burger--close {
+    display: flex;
+    align-self: flex-end;
+    background: none;
+    border: none;
+}
+
+.burger__cross {
+    @include mixins.flex-center;
+    flex-direction: column;
+    border: solid 1px black;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 22px;
+}

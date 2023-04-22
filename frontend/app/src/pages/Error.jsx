@@ -12,7 +12,7 @@ export default function Error() {
     }, [])
 
     if (redirectReady) {
-        return <Navigate to="/" />;
+        return <Navigate to="/recipe" />;
     }
 
     return (

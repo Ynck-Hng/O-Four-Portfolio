@@ -120,6 +120,9 @@
 .no__viewed--recipe, .no__generated--recipe{
     margin: 0 auto;
     padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .random__recipe--separator{
