@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "node index.js",
+    "prisma:generate": "npx prisma generate"
+  },
   "dependencies": {
     "@prisma/client": "^4.11.0",
     "cors": "^2.8.5",
