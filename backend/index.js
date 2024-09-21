@@ -2,11 +2,11 @@ require("dotenv").config({override: true});
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
-const router = require("./app/router/index");
+const router = require("./src/router/index");
 const cors = require("cors");
-const {errorCollector, notFound} = require("./app/utils/errorHandler");
+const {errorCollector, notFound} = require("./src/utils/errorHandler");
 const expressSwagger = require("express-swagger-generator")(app);
-const swaggerOptions = require("./app/utils/swaggerOptions");
+const swaggerOptions = require("./src/utils/swaggerOptions");
 
 app.use(cors());
 
