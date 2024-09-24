@@ -1,7 +1,11 @@
 {
+  "name": "ofour-api",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "dev": "node index.js",
-    "prisma:generate": "npx prisma generate"
+    "dev": "nodemon -L",
+    "prisma:generate": "npx prisma generate",
+    "test": "vitest"
   },
   "dependencies": {
     "@prisma/client": "^4.11.0",
@@ -11,5 +15,9 @@
     "express-session": "^1.17.3",
     "express-swagger-generator": "^1.1.17",
     "prisma": "^4.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "vitest": "^2.1.1"
   }
 }

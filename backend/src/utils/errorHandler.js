@@ -4,7 +4,7 @@ exports.errorCatcher = (fn) => {return (req,res,next) => {
 
 exports.errorCollector = (err,req,res,next) => {
     const status = err.status || 500;
-    res.status(status).send({message: err.message, stack: err.message});
+    res.status(status).send({message: err.message});
 }
 
 exports.notFound = (req,res,next) => {

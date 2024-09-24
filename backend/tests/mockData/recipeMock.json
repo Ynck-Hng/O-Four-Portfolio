@@ -1,0 +1,106 @@
+{
+   "id":1,
+   "name":"Ratatouille",
+   "description":"Un plat végétarien traditionnel du sud de la France à base de légumes d'été mijotés.",
+   "grade":3,
+   "ingredients":[
+      {
+         "recipe_id":1,
+         "ingredient_id":1,
+         "ingredient":{
+            "id":1,
+            "name":"tomates"
+         }
+      },
+      {
+         "recipe_id":1,
+         "ingredient_id":2,
+         "ingredient":{
+            "id":2,
+            "name":"poivron rouge"
+         }
+      },
+      {
+         "recipe_id":1,
+         "ingredient_id":3,
+         "ingredient":{
+            "id":3,
+            "name":"courgettes"
+         }
+      },
+      {
+         "recipe_id":1,
+         "ingredient_id":4,
+         "ingredient":{
+            "id":4,
+            "name":"aubergines"
+         }
+      },
+      {
+         "recipe_id":1,
+         "ingredient_id":5,
+         "ingredient":{
+            "id":5,
+            "name":"huile d'olive"
+         }
+      },
+      {
+         "recipe_id":1,
+         "ingredient_id":6,
+         "ingredient":{
+            "id":6,
+            "name":"soupe d'herbes de Provence"
+         }
+      },
+      {
+         "recipe_id":1,
+         "ingredient_id":7,
+         "ingredient":{
+            "id":7,
+            "name":"sel"
+         }
+      }
+   ],
+   "steps":[
+      {
+         "id":1,
+         "content":"Préchauffer le four à 200°C.",
+         "recipe_id":1
+      },
+      {
+         "id":2,
+         "content":"Couper les légumes en morceaux de taille similaire.",
+         "recipe_id":1
+      },
+      {
+         "id":3,
+         "content":"Étaler les tomates en dés sur le fond d'un plat allant au four.",
+         "recipe_id":1
+      },
+      {
+         "id":4,
+         "content":"Ajouter les poivrons, les courgettes et les aubergines sur les tomates.",
+         "recipe_id":1
+      },
+      {
+         "id":5,
+         "content":"Verser l'huile d'olive sur les légumes et saupoudrer d'herbes de Provence.",
+         "recipe_id":1
+      },
+      {
+         "id":6,
+         "content":"Saler et poivrer selon votre goût.",
+         "recipe_id":1
+      },
+      {
+         "id":7,
+         "content":"Mettre le plat au four et cuire pendant environ 45 minutes ou jusqu'à ce que les légumes soient tendres.",
+         "recipe_id":1
+      },
+      {
+         "id":8,
+         "content":"Sortir le plat du four et servir chaud, tiède ou froid.",
+         "recipe_id":1
+      }
+   ]
+}
